@@ -16,21 +16,44 @@ public void bubbleSort (int[] vet){
 }
 
 public void selectionSort(int[] vet){
-	int referência = 0;
-	int aux;
-	int posterior;
+	int menor = 0;
+	int index = 0;
+	int maior = 0;
 
 	for(int i = 0; i < vet.length(); i++){
-	referência = vet[i];
 
 		for(int j = i + 1; j < vet.length(); j++){
-		if(vet[j] < referência){
-		referência = vet[j];
-		aux = j;
+
+		if(vet[j] < vet[i]){
+		menor = vet[j];
+		index = j;
 			}
 		}
-	posterior = vet[i];
-	vet[i] = referência;
-	vet[aux] = posterior;
+		if(index == 0 && menor == 0){
+			break;
+		}
+	maior = vet[i];
+	vet[i] = menor;
+	vet[index] = maior;
 	}
+}
+
+public void insertionSort(vet[] int){
+
+	for(int i = 1; i < vet.length(); i++){
+	int chave = vet[i];
+		for(int j = 0; j < i; j++){
+
+			if(vet[j] > vet[i]){
+			vet[j] = vet[i];	
+			vet[j] = chave;
+			}
+		}
+	}
+}
+
+
+
+
+
 }
